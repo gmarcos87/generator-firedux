@@ -1,4 +1,4 @@
-# generator-firedux [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# generator-firedux [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage Status](https://coveralls.io/repos/github/gmarcos87/generator-firedux/badge.svg?branch=master)](https://coveralls.io/github/gmarcos87/generator-firedux?branch=master)
 > ngRx/store generator for Ionic2 proyects
 
 ## Installation
