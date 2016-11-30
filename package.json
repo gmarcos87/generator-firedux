@@ -13,7 +13,7 @@
   ],
   "main": "generators/index.js",
   "keywords": [
-    "ngrx ionic2 firebase",
+    "ngrx,ionic2,firebase",
     "yeoman-generator"
   ],
   "dependencies": {
