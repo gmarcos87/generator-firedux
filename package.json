@@ -1,6 +1,6 @@
 {
   "name": "generator-firedux",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "ngRx/store generator for Ionic2 projects",
   "homepage": "https://github.com/gmarcos87/generator-firedux",
   "author": {
