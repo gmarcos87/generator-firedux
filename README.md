@@ -10,10 +10,43 @@ npm install -g yo
 npm install -g generator-firedux
 ```
 
-Then generate your new project:
+Then in your ./ionic-app/src generate your new store (ngrx/store + AngularFire + Ionic2):
 
 ```bash
-yo firedux somestorename
+yo firedux newstore
+```
+
+Import your new store in app.module.ts
+```javascript
+import { NewstoreActions } from '../actions/newstore.actions'
+import { NewstoreEffects } from '../effects/newstore.effects'
+import { NewstoreReducer } from '../reducers/newstore.reducer'
+import { NewstoreService } from '../providers/newstore.service'
+
+
+...
+imports: [
+    ...//others effects or imports
+    EffectsModule.runAfterBootstrap(NewstoreEffects)
+    StoreModule.provideStore({ newstore: NewstoreReducer, otherstore: OtherstoreReducer })
+ ]
+ ...
+providers :[
+  ...//others providers or services
+  NewstoreService,
+  NewstoreActions
+]
+```
+
+Add Newstore to services/app-state.ts
+```javascript
+...
+import { NewstoreI } from '../models/newstore.model';
+...
+export interface AppState {
+  ...//others stores
+  newstore: NewstoreI[]
+}
 ```
 
 ## Getting To Know Yeoman
