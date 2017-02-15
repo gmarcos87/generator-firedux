@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Effect, toPayload, Actions } from '@ngrx/effects';
+import { Action } from '@ngrx/store';
 
 import {Observable} from 'rxjs/Rx';
 import 'rxjs/add/operator/mergeMap';
@@ -34,17 +35,17 @@ export class <%= firstUpSingleName %>Effects {
 
     @Effect({dispatch: false}) add<%= firstUpSingleName %>$ = this.actions$
         .ofType(<%= firstUpSingleName %>Actions.ADD_<%= upSingleName %>)
-        .map<<%= interfaceName %>>(toPayload)
+        .map<Action, <%= interfaceName %>>(toPayload)
         .switchMap(<%= lowSingleName %> => Observable.fromPromise(this.fb.add(<%= lowSingleName %>)));
 
     @Effect() update<%= firstUpSingleName %>o$ = this.actions$
         .ofType(<%= firstUpSingleName %>Actions.UPDATE_<%= upSingleName %>)
-        .map<<%= interfaceName %>>(toPayload)
+        .map<Action, <%= interfaceName %>>(toPayload)
         .mergeMap(<%= lowSingleName %> => this.fb.update(<%= lowSingleName %>));
 
     @Effect({dispatch: false}) delete<%= firstUpSingleName %>o$ = this.actions$
         .ofType(<%= firstUpSingleName %>Actions.DELETE_<%= upSingleName %>)
-        .map<<%= interfaceName %>>(toPayload)
+        .map<Action, <%= interfaceName %>>(toPayload)
         .mergeMap(<%= lowSingleName %> => this.fb.delete(<%= lowSingleName %>));
 
 }
