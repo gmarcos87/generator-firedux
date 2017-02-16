@@ -3,8 +3,7 @@ import { <%= firstUpSingleName %>Actions } from '../actions/<%= lowSingleName %>
 
 import { <%= interfaceName %> } from '../models/<%= lowSingleName %>.model'
 
-
-export const <%= firstUpSingleName %>Reducer: ActionReducer<<%= interfaceName %>[]> = (state: <%= interfaceName %>[] = [], action: Action) => {
+export function <%= firstUpSingleName %>Reducer (state: <%= interfaceName %>[] = [], action: Action) {
     if(action && action.type){
         switch(action.type) {
             case <%= firstUpSingleName %>Actions.LOAD_<%= upSingleName %>_SUCCESS:
