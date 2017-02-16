@@ -1,6 +1,6 @@
 {
   "name": "generator-firedux",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "ngRx/store generator for Ionic2 projects",
   "homepage": "https://github.com/gmarcos87/generator-firedux",
   "author": {
@@ -17,21 +17,21 @@
     "yeoman-generator"
   ],
   "dependencies": {
-    "yeoman-generator": "^0.24.1",
+    "yeoman-generator": "^1.1.0",
     "chalk": "^1.0.0",
-    "yosay": "^1.0.0"
+    "yosay": "^2.0.0"
   },
   "devDependencies": {
     "yeoman-test": "^1.0.0",
-    "yeoman-assert": "^2.0.0",
-    "eslint": "^2.1.0",
-    "eslint-config-xo-space": "^0.13.0",
+    "yeoman-assert": "^3.0.0",
+    "eslint": "^3.15.0",
+    "eslint-config-xo-space": "^0.15.0",
     "gulp": "^3.9.0",
-    "gulp-eslint": "^2.0.0",
+    "gulp-eslint": "^3.0.1",
     "gulp-exclude-gitignore": "^1.0.0",
     "gulp-line-ending-corrector": "^1.0.1",
-    "gulp-istanbul": "^0.10.3",
-    "gulp-mocha": "^2.0.0",
+    "gulp-istanbul": "^1.1.1",
+    "gulp-mocha": "^3.0.1",
     "gulp-plumber": "^1.0.0",
     "gulp-nsp": "^2.1.0",
     "gulp-coveralls": "^0.1.0"

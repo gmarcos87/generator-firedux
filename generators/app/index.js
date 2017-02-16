@@ -1,19 +1,19 @@
 'use strict';
-var yeoman = require('yeoman-generator');
+const Generator = require('yeoman-generator');
 var _ = require('lodash');
 
-module.exports = yeoman.Base.extend({
-  constructor: function () {
-    yeoman.Base.apply(this, arguments);
+module.exports = class extends Generator {
+  constructor(argument, options) {
+    super(argument, options);
     this.argument('store', {type: String, required: true});
     this.names = {
-      interfaceName: _.capitalize(this.store) + 'I',
-      lowSingleName: _.lowerCase(this.store),
-      firstUpSingleName: _.capitalize(this.store),
-      upSingleName: _.upperCase(this.store)
+      interfaceName: _.capitalize(this.options.store) + 'I',
+      lowSingleName: _.lowerCase(this.options.store),
+      firstUpSingleName: _.capitalize(this.options.store),
+      upSingleName: _.upperCase(this.options.store)
     };
-  },
-  writing: function () {
+  }
+  writing() {
     var copy = function (a, x) {
       this.fs.copyTpl(
         this.templatePath(x[0] + '/' + x[1] + '.ts'),
@@ -34,4 +34,4 @@ module.exports = yeoman.Base.extend({
       this.log(x);
     }.bind(this));
   }
-});
+};
